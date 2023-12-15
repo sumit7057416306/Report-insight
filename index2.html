@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px;
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    /* Add different styles for each box */
+    #box1 { background-color: lightblue; }
+    #box2 { background-color: lightgreen; }
+    #box3 { background-color: lightcoral; }
+    #box4 { background-color: lightsalmon; }
+
+    /* Add a container to hold the content */
+    #content-container {
+      margin-top: 20px;
+    }
+
+    .content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Create boxes with different IDs -->
+  <div id="box1" class="box" onclick="showContent('content1')">Box 1</div>
+  <div id="box2" class="box" onclick="showContent('content2')">Box 2</div>
+  <div id="box3" class="box" onclick="showContent('content3')">Box 3</div>
+  <div id="box4" class="box" onclick="showContent('content4')">Box 4</div>
+
+  <!-- Create content containers with different IDs -->
+  <div id="content-container">
+    <div id="content1" class="content">
+      <h2>Content for Box 1</h2>
+      <p>This is the information for Box 1.</p>
+    </div>
+    <div id="content2" class="content">
+      <h2>Content for Box 2</h2>
+      <p>This is the information for Box 2.</p>
+    </div>
+    <div id="content3" class="content">
+      <h2>Content for Box 3</h2>
+      <p>This is the information for Box 3.</p>
+    </div>
+    <div id="content4" class="content">
+      <h2>Content for Box 4</h2>
+      <p>This is the information for Box 4.</p>
+    </div>
+  </div>
+
+  <script>
+
+    // Show content for the first box by default
+    showContent('content1');
+
+
+    function showContent(contentId) {
+      // Hide all content elements
+      var contentElements = document.querySelectorAll('.content');
+      contentElements.forEach(function (element) {
+        element.style.display = 'none';
+      });
+
+      // Show the selected content element
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
