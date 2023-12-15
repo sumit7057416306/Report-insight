@@ -411,12 +411,6 @@ button.btn-btm {
     margin-left: 33%;
 }
 
-
-
-
-
-
-
 body,
 p {
     font-family: 'Poppins', sans-serif;
@@ -436,10 +430,8 @@ footer {
 
 .colrow-mainfooter {
     display: flex;
-    /* position: absolute; */
     height: 80%;
-    /* margin: 15px; 
-    padding: 10px; */
+    
 
 }
 
@@ -469,8 +461,6 @@ footer {
 #quick {
     margin-left: 25px;
 }
-
-
 /* side table radio buttons */
 
 table {
@@ -503,15 +493,11 @@ del {
 
 .why-us-heading h5 {
     margin: 30%;
-
-
 }
 
 .colrow {
     border-bottom: 2px solid gray;
 }
-
-
 /* new btn */
 #a {
     position: relative;
@@ -586,14 +572,9 @@ del {
     padding: 5px;
 }
 
-
-
-
 .bottom-content{
     color: #0f0;
 }
-
-
 
 #abe{
     box-sizing: border-box;
@@ -601,6 +582,178 @@ del {
     border-style: double;
     border-top: thick;
     top:50px;
-    /* border: #000;
-    border-radius: 5px; */
+ 
+}
+
+/* responsive content */
+@media only screen and (min-width: 768px) {
+    body,
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Add styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    #main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .box {
+        width: 100%; /* Full width for smaller screens */
+        margin-top: 5px;
+    }
+
+    .accordion-item {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .accordion-content img {
+        margin-left: 0; /* Center images for smaller screens */
+    }
+
+    .left h2 {
+        margin-top: 0; /* Adjust margin-top for smaller screens */
+    }
+}
+
+/* Add responsive styles for footer */
+footer {
+    Background: #003366;
+    padding: 10px;
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colrow-mainfooter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colrow-3 {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+/* Add responsive styles for the left sidebar */
+.left {
+    margin: 15px;
+    border: #e74c3c;
+    border-radius: 5px;
+    position: sticky;
+    top: 20px;
+}
+
+.left h2 {
+    text-align: center;
+    margin-top: 0;
+    background-color: rgb(2, 2, 48);
+    color: white;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.img-left img {
+    margin-top: 10px;
+    max-width: 100%; /* Make images responsive */
+}
+
+.para {
+    animation: fadeIn 1s forwards;
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    padding-top: 15px;
+    animation: fadeInUp 1s forwards;
+}
+
+/* Add responsive styles for the table */
+#table {
+    margin: 20px auto;
+}
+
+/* Add responsive styles for the button */
+#btn {
+    margin-left: 20px;
+}
+
+/* Add responsive styles for the responsive navigation */
+#abe {
+    box-sizing: border-box;
+    border-color: #f00;
+    border-style: double;
+    border-top: thick;
+    margin-top: 50px;
+}
+
+/* Add responsive styles for the new button */
+#a {
+    width: 100%; /* Full width for smaller screens */
+    margin-left: 0; /* Center the button for smaller screens */
+}
+
+/* Add responsive styles for the accordion content */
+.accordion-content {
+    width: 100%; /* Full width for smaller screens */
+}
+
+/* Add responsive styles for the side table radio buttons */
+table {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%; /* Full width for smaller screens */
+}
+
+/* Add responsive styles for the contact and quick links */
+#contact,
+#quick {
+    margin-left: 0; /* Center the contact and quick links for smaller screens */
+}
+
+/* Add responsive styles for the bottom content */
+.bottom-content {
+    color: #0f0;
+    margin: 15px; /* Add margin for better spacing on smaller screens */
+}
+
+/* for small screen like mobile */
+
+@media only screen and (max-width: 400px) {
+    .accordion-item {
+        font-size: 12px; /* Further adjust font size for very small screens */
+    }
+
+    .content,
+    .accordion-content {
+        padding: 5px; /* Adjust padding for very small screens */
+    }
+
+    .box {
+        margin-top: 2px; /* Further adjust margin for very small screens */
+    }
+
+    .left {
+        margin: 5px; /* Further adjust margin for very small screens */
+    }
+
+    .img-left img {
+        max-width: 80%; /* Adjust image width for very small screens */
+    }
+
+    .colrow-3 {
+        margin-left: 2px; /* Further adjust margin for very small screens */
+    }
+
+    #abe {
+        margin-top: 10px; /* Adjust margin-top for very small screens */
+    }
+
+    #btn,
+    #a {
+        margin-left: 0; /* Center elements for very small screens */
+    }
 }
